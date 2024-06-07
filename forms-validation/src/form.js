@@ -36,7 +36,7 @@ const Form = () => {
     if (!formData.password) newErrors.password = 'Password is required';
     else if (!passwordRegex.test(formData.password)) newErrors.password = 'Password must contain at least 8 characters, 1 number, 1 upper and 1 lowercase!';
     if (!formData.phone) newErrors.phone = 'Phone Number is required';
-    else if (!phoneRegex.test(formData.phone)) newErrors.phone = 'Phone Number must be in the format +<country code>-<10 digit number>';
+    else if (!phoneRegex.test(formData.phone)) newErrors.phone = 'Phone Number must be in the format +<country code>-<10 digit number>,i.e., +91-6578345610';
     if (!formData.country) newErrors.country = 'Country is required';
     if (!formData.city) newErrors.city = 'City is required';
     if (!formData.pan) newErrors.pan = 'PAN is required';
@@ -131,7 +131,7 @@ const Form = () => {
           onChange={handleChange}
         />
         {errors.phone && <span>{errors.phone}</span>}
-        <small>Phone Number must be in the format +CountryCode-10 digit number</small>
+        <small>Phone Number must be in the format +CountryCode-10 digit number, i.e, +91-6578345610</small>
       </div>
       <div>
         <label>Country</label>

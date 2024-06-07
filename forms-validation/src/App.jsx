@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Form from './form';
-import Success from './Success';
+import Success from './submit';
 import './styles.css';
 
 const App = () => {
